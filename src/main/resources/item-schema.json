@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "title": "Item",
+  "description": "A single Item",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for a product",
+      "type": "string"
+    },
+    "name": {
+      "description": "Name of the product",
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    }
+  },
+  "required": ["name"]
+}

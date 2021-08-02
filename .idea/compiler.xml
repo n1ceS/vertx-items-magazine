@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for starter" enabled="true">
+        <sourceOutputDir name="src/main/generated" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="outputDirectory" value="C:\Users\Michal\IdeaProjects\Vert.x/src/main" />
+        <processor name="io.vertx.codegen.CodeGenProcessor" />
+        <module name="starter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="starter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="starter" options="-AoutputDirectory=C:\Users\Michal\IdeaProjects\Vert.x/src/main" />
+    </option>
+  </component>
+</project>

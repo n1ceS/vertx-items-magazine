@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "title": "User",
+  "description": "User representation",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for a user",
+      "type": "string"
+    },
+    "login": {
+      "description": "The user name",
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "maxLength": 15,
+      "minLength": 6
+    }
+  },
+  "required": ["login", "password"]
+}
