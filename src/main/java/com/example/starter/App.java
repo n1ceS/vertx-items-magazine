@@ -58,7 +58,6 @@ public class App extends AbstractVerticle {
     userSchema = getSchemaFromJsonFile(schemaParser, "user-schema.json");
 
     Router router = Router.router(vertx);
-
     router.get("/items").handler(JWTAuthHandler.create(authProvider)).handler(this::getUserItems);
     router.route(("/items")).handler(BodyHandler.create());
     router.post("/items").handler(JWTAuthHandler.create(authProvider)).handler(this::addItem);
@@ -80,10 +79,7 @@ public class App extends AbstractVerticle {
               ctx.response().setStatusCode(400).end("User with this login exists");
               return;
             }
-            String id = rh.result().body().toString();
-            LOGGER.info(id);
-            String token = authProvider.generateToken(new JsonObject().put("sub", id));
-            ctx.response().setStatusCode(200).end(new JsonObject().put("token", token).toString());
+            ctx.response().setStatusCode(204).end();
           }else {
             ctx.response().setStatusCode(400).end(rh.cause().getMessage());
           }
